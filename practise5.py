@@ -24,15 +24,15 @@ print('Tuple :' , tuple)
 print('----------------')
 
 #4 Write a Python function that takes two lists and returns True if they have at least one common member.
-def common_data(list1, list2):
-    result = False
-    for x in list1:
-        for y in list2:
-            if x == y:
-                result = True
-                return result
-
-print(common_data([1, 2, 3, 4, 5], [5, 6, 7, 8, 9]))
+list1 = input('Enter 1st list : ').split()
+list2 = input('Enter 2nd list : ').split()
+res = set(list1)&set(list2)
+if res:
+    print(True)
+else:
+    print(False)
+    
+print('-----------')
 
 #5 Write a Python-script.
 bus_array = [(10,0), (3,5), (5,8)]
